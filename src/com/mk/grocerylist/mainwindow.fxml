@@ -27,14 +27,17 @@
             </Menu>
         </MenuBar>
     </top>
-        <ListView/>
     <center>
-        <VBox style="-fx-background-color: white">
-            <TextArea fx:id="itemDetailsTextArea" VBox.vgrow="ALWAYS"/>
-            <HBox>
-                <TextField/>
-                <Button text="Add to item to the list"/>
-            </HBox>
-        </VBox>
+        <ListView fx:id="groceriesList">
+
+        </ListView>
     </center>
+    <bottom>
+        <HBox>
+            <TextField/>
+            <Button text="Add item to the list"/>
+        </HBox>
+
+    </bottom>
+
 </BorderPane>

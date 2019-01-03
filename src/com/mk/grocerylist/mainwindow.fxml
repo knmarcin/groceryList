@@ -20,8 +20,9 @@
         <MenuBar>
             <Menu text="Menu">
                 <items>
-                    <MenuItem text="New..."/>
+                    <MenuItem text="Author"/>
                     <SeparatorMenuItem/>
+                    <MenuItem text="groceryList 1.0"/>
                 </items>
             </Menu>
         </MenuBar>

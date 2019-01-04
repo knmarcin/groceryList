@@ -39,6 +39,7 @@ public class Controller {
         groceryListItem item = new groceryListItem(textField.getText());
         groceries.add(item);
         groceriesList.getItems().setAll(groceries);
+        textField.setText(" ");
     }
 
     @FXML
@@ -90,18 +91,5 @@ public class Controller {
     }
 
 
-//        try {
-//            FileReader fileReader = new FileReader("grocery list.txt");
-//            BufferedReader bufferedReader = new BufferedReader(fileReader);
-//
-//
-//            while ((line = bufferedReader.readLine())!= null ) {System.out.println(line);}
-//
-//            bufferedReader.close();
-//            groceries = line
-//        } catch (FileNotFoundException e) {
-//            System.out.println("Unable to open file");
-//        } catch (IOException e) {
-//            System.out.println("Error reading file");
-//        }
+
 

@@ -15,7 +15,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.layout.HBox?>
 <BorderPane fx:controller="com.mk.grocerylist.Controller"
-            xmlns:fx="http://javafx.com/fxml">
+            xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@style.css">
     <top>
         <MenuBar>
             <Menu text="Menu">

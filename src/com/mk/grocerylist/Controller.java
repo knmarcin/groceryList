@@ -19,6 +19,8 @@ public class Controller {
     private Button addToList;
     @FXML
     private TextField textField;
+    @FXML
+    private Button deleteSelected;
 
     public void initialize() {
 
@@ -32,6 +34,20 @@ public class Controller {
         groceries.add(item);
         groceriesList.getItems().setAll(groceries);
     }
+
+    @FXML
+    public void deleteSelected() {
+
+        int toDeleteIndex = groceriesList.getSelectionModel().getSelectedIndex();
+        groceriesList.getItems().remove(toDeleteIndex);
+        groceries.remove(toDeleteIndex);
+        groceriesList.getItems().setAll(groceries);
+        System.out.println(groceries);
+
+
+    }
+
+
 
 
 }

@@ -20,9 +20,12 @@
         <MenuBar>
             <Menu text="Menu">
                 <items>
-                    <MenuItem text="Author"/>
+                    <MenuItem fx:id="saveGroceryListToFile" onAction="#saveGroceryListToFile" text="Save..."/>
+                    <MenuItem fx:id="loadGroceriesFromFile" onAction="#loadGroceriesFromFile" text="Load previous list"/>
                     <SeparatorMenuItem/>
+                    <MenuItem text="Author"/>
                     <MenuItem text="groceryList 1.0"/>
+                    <SeparatorMenuItem/>
                 </items>
             </Menu>
         </MenuBar>
@@ -34,7 +37,7 @@
     </center>
     <bottom>
         <HBox>
-            <TextField fx:id="textField"/>
+            <TextField fx:id="textField" />
             <Button fx:id="addToList" onMouseClicked="#addToList" text="Add item"/>
             <Button fx:id="deleteSelected" onMouseClicked="#deleteSelected" text="Delete selected"/>
         </HBox>

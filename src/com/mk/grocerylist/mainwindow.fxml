@@ -34,8 +34,9 @@
     </center>
     <bottom>
         <HBox>
-            <TextField/>
-            <Button text="Add item to the list"/>
+            <TextField fx:id="textField"/>
+            <Button fx:id="addToList" onMouseClicked="#addToList" text="Add item"/>
+            <Button text="Delete selected"/>
         </HBox>
 
     </bottom>

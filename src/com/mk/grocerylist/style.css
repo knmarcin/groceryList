@@ -1,0 +1,11 @@
+.Button {
+    "-fx-background-radius: 0"
+}
+.TextField {
+    "-fx-background-radius: 0"
+}
+
+.root {
+        -fx-accent: #737373;
+        -fx-focus-color: #737373
+}

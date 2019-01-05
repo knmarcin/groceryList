@@ -1,4 +1,4 @@
 package com.mk.grocerylist;
 
-public class Authorinfo {
+public class authorInfo {
 }

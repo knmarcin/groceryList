@@ -1,4 +1,4 @@
 package com.mk.grocerylist;
 
-public class Appinfo {
+public class appInfo {
 }

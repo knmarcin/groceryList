@@ -6,17 +6,29 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.mk.grocerylist.Appinfo">
-    <top>
-        <Label text="Grocery List"/>
-    </top>
+            fx:controller="com.mk.grocerylist.appInfo"
+            prefHeight="280" prefWidth="280">
     <center>
+    <VBox alignment="CENTER">
+
+        <ImageView>
+            <Image url="@groceryListIcon.bmap.png" requestedWidth="150" requestedHeight="170"/>
+        </ImageView>
+        <Label text="Grocery List v. 1.0.0"/>
+    </VBox>
 
     </center>
     <bottom>
-        <Label text="Author: Marcin Knap"/>
+        <BorderPane>
+            <center>
+                <Label text="Author: Marcin Knap 2019" textAlignment="CENTER"/>
+            </center>
+        </BorderPane>
+
     </bottom>
 
 </BorderPane>

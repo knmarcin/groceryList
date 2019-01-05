@@ -31,12 +31,12 @@ public class Controller {
     private MenuItem saveGroceryListToFile;
     String line = null;
 
-    public void initialize() {
-
+    public void initialize() throws IOException {
         groceries = new ArrayList<groceryListItem>();
         groceriesList.getItems().setAll(groceries);
-
+        loadGroceriesFromFile();
     }
+
     @FXML
     public void addToList() {
         groceryListItem item = new groceryListItem(textField.getText());
@@ -51,7 +51,7 @@ public class Controller {
         groceriesList.getItems().remove(toDeleteIndex);
         groceries.remove(toDeleteIndex);
         groceriesList.getItems().setAll(groceries);
-        groceriesList.getSelectionModel().select(0);
+        groceriesList.getSelectionModel().select(toDeleteIndex);
 
     }
 
@@ -84,6 +84,7 @@ public class Controller {
                     groceries.add(item);
                 }
                 groceriesList.getItems().setAll(groceries);
+                groceriesList.getSelectionModel().select(0);
             }
 
             } finally {
@@ -92,6 +93,7 @@ public class Controller {
                 }
             }
         }
+
     }
 
 

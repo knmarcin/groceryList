@@ -4,11 +4,14 @@ import com.mk.grocerylist.datamodel.groceryListItem;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.security.Key;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,12 +47,14 @@ public class Controller {
 
     @FXML
     public void deleteSelected() {
-
         int toDeleteIndex = groceriesList.getSelectionModel().getSelectedIndex();
         groceriesList.getItems().remove(toDeleteIndex);
         groceries.remove(toDeleteIndex);
         groceriesList.getItems().setAll(groceries);
+        groceriesList.getSelectionModel().select(0);
+
     }
+
 
     @FXML
     public void saveGroceryListToFile() throws FileNotFoundException {
@@ -66,7 +71,6 @@ public class Controller {
         BufferedReader bufferedReader = Files.newBufferedReader(path);
         String input;
         int i = 0;
-
         try {
             while ((input = bufferedReader.readLine()) != null) {
                 input=input.replace("[","");

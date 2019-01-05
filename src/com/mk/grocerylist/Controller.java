@@ -37,12 +37,15 @@ public class Controller {
         loadGroceriesFromFile();
     }
 
+
     @FXML
-    public void addToList() {
+    public void addToList() throws FileNotFoundException {
         groceryListItem item = new groceryListItem(textField.getText());
         groceries.add(item);
         groceriesList.getItems().setAll(groceries);
-        textField.setText(" ");
+        textField.setText("");
+        saveGroceryListToFile();
+        groceriesList.getSelectionModel().select(0);
     }
 
     @FXML

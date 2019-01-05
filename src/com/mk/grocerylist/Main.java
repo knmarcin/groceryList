@@ -21,7 +21,7 @@ TextField textField = new TextField();
         primaryStage.setTitle("Grocery List");
         primaryStage.setScene(new Scene(root, 355, 500));
         primaryStage.setResizable(false);
-        primaryStage.requestFocus();
+
         primaryStage.show();
 
 

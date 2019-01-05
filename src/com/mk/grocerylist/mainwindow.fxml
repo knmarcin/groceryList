@@ -14,6 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.RadioMenuItem?>
 <BorderPane fx:controller="com.mk.grocerylist.Controller"
             xmlns:fx="http://javafx.com/fxml"
             stylesheets="@style.css">
@@ -21,8 +22,7 @@
         <MenuBar>
             <Menu text="Menu">
                 <items>
-                    <MenuItem fx:id="saveGroceryListToFile" onAction="#saveGroceryListToFile" text="Save..."/>
-                    <MenuItem fx:id="loadGroceriesFromFile" onAction="#loadGroceriesFromFile" text="Load previous list"/>
+                    <MenuItem fx:id="saveGroceryListToFile" onAction="#deleteAll" text="Delete all"/>
                     <SeparatorMenuItem/>
                     <MenuItem text="Author"/>
                     <MenuItem text="groceryList 1.0"/>

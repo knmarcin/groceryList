@@ -16,8 +16,8 @@
                 <items>
                     <MenuItem fx:id="saveGroceryListToFile" onAction="#deleteAll" text="Delete all"/>
                     <SeparatorMenuItem/>
-                    <MenuItem text="Author"/>
-                    <MenuItem text="groceryList 1.0"/>
+                    <MenuItem text="Author" onAction="#openAuthorInfo"/>
+                    <MenuItem text="groceryList 1.0" onAction="#openAppInfo"/>
                     <SeparatorMenuItem/>
                 </items>
             </Menu>

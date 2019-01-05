@@ -30,7 +30,7 @@
     </center>
     <bottom>
         <HBox>
-            <TextField fx:id="textField" />
+            <TextField fx:id="textField" onKeyReleased="#handleKeyReleased"/>
             <Button fx:id="addToList" onMouseClicked="#addToList" text="Add item"/>
             <Button fx:id="deleteSelected" onMouseClicked="#deleteSelected" text="Delete selected"/>
         </HBox>

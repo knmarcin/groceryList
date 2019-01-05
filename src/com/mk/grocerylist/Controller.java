@@ -31,11 +31,19 @@ public class Controller {
     private MenuItem saveGroceryListToFile;
     String line = null;
 
+    @FXML
     public void initialize() throws IOException {
         groceries = new ArrayList<groceryListItem>();
         groceriesList.getItems().setAll(groceries);
+        addToList.setDisable(true);
         loadGroceriesFromFile();
 
+    }
+    @FXML
+    public void handleKeyReleased() {
+        String text = textField.getText();
+        boolean disableButton = text.isEmpty() || text.trim().isEmpty();
+        addToList.setDisable(disableButton);
     }
 
     @FXML
@@ -55,6 +63,7 @@ public class Controller {
         textField.setText("");
         saveGroceryListToFile();
         groceriesList.getSelectionModel().select(groceries.size()-1);
+        addToList.setDisable(true);
     }
 
     @FXML
@@ -87,7 +96,7 @@ public class Controller {
         Path path = Paths.get("grocery list.txt");
         BufferedReader bufferedReader = Files.newBufferedReader(path);
         String input;
-        int i = 0;
+        int i;
         try {
             while ((input = bufferedReader.readLine()) != null) {
                 input=input.replace("[","");

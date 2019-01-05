@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -12,9 +9,6 @@
             prefHeight="280" prefWidth="280">
     <center>
         <Label text="Marcin Knap, numer indeksu 439417" wrapText="true">
-
         </Label>
     </center>
-
-
 </BorderPane>

@@ -7,8 +7,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-
-
 public class Main extends Application {
 TextField textField = new TextField();
     @Override
@@ -19,10 +17,7 @@ TextField textField = new TextField();
         primaryStage.setResizable(false);
 
         primaryStage.show();
-
-
     }
-
 
     @Override
     public void init() throws Exception {
@@ -38,5 +33,4 @@ TextField textField = new TextField();
         launch(args);
 
     }
-
 }

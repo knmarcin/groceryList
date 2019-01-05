@@ -6,11 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import com.mk.grocerylist.Controller;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.PrintWriter;
 
 
 public class Main extends Application {
@@ -30,7 +26,7 @@ TextField textField = new TextField();
 
     @Override
     public void init() throws Exception {
-
+        textField.isFocused();
     }
 
     @Override

@@ -57,7 +57,6 @@ public class Controller {
         groceries.clear();
         groceriesList.getItems().setAll(groceries);
         saveGroceryListToFile();
-
     }
 
 
@@ -84,6 +83,11 @@ public class Controller {
         } else {
             groceriesList.getSelectionModel().select(toDeleteIndex - 1);
         }
+    }
+
+    @FXML
+    public void deleteSelectedItem(KeyEvent event) throws FileNotFoundException {
+        if (event.getCode().toString().equals(KeyCode.ENTER)) {deleteSelected();}
     }
 
 

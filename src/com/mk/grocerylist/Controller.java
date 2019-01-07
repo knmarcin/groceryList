@@ -84,10 +84,11 @@ public class Controller {
         }
     }
 
-    @FXML
-    public void deleteSelectedItem(KeyEvent event) throws FileNotFoundException {
-        if (event.getCode().toString().equals(KeyCode.ENTER)) {deleteSelected();}
-    }
+//    @FXML
+//    public void deleteSelectedItem(KeyEvent event) throws FileNotFoundException {
+//        if (event.getCode().toString().equals(KeyCode.ENTER)) {deleteSelected();}
+//    }
+    // not working yet
 
 
     @FXML

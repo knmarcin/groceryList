@@ -1,11 +1,22 @@
-.Button {
-    "-fx-background-radius: 0"
+.button {
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
 }
 .TextField {
-    "-fx-background-radius: 0"
+    -fx-background-radius: 0;
 }
 
 .root {
-        -fx-accent: #737373;
-        -fx-focus-color: #737373
+        -fx-accent: #d3d3d3;
+        -fx-focus-color: #d3d3d3;
+}
+
+
+.button:hover
+{
+  -fx-background-color: #d3d3d3;
+}
+.button:pressed
+{
+  -fx-background-color: gray;
 }

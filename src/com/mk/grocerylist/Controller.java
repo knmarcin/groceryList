@@ -32,7 +32,7 @@ public class Controller {
     @FXML
     private Button deleteSelected;
     @FXML
-    private MenuItem saveGroceryListToFile;
+    private MenuItem deleteEveryItem;
     String line = null;
 
     @FXML

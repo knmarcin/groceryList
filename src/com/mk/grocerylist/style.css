@@ -20,3 +20,11 @@
 {
   -fx-background-color: gray;
 }
+
+.text-field {
+    -fx-background-color: white;
+}
+
+.text-field:focused {
+    -fx-background-color: white;
+}

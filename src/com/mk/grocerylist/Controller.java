@@ -59,7 +59,7 @@ public class Controller {
 
 
     @FXML
-    public void addToList() throws FileNotFoundException {
+    public void addToList() throws IOException {
         groceryListItem item = new groceryListItem(textField.getText());
         groceries.add(item);
         groceriesList.getItems().setAll(groceries);
@@ -67,6 +67,7 @@ public class Controller {
         saveGroceryListToFile();
         groceriesList.getSelectionModel().select(groceries.size() - 1);
         addToList.setDisable(true);
+        loadGroceriesFromFile();
     }
 
     @FXML

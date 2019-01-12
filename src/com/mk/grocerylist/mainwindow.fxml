@@ -15,7 +15,6 @@
             <Menu text="Menu">
                 <items>
                     <MenuItem fx:id="deleteEveryItem" onAction="#deleteAll" text="Delete all"/>
-                    <MenuItem text="Przeładuj" onAction="#loadGroceriesFromFile"/>
                     <SeparatorMenuItem/>
                     <MenuItem text="Author" onAction="#openAuthorInfo"/>
                     <MenuItem text="groceryList v1.0" onAction="#openAppInfo"/>

@@ -8,8 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
+
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -84,13 +83,6 @@ public class Controller {
         }
     }
 
-//    @FXML
-//    public void deleteSelectedItem(KeyEvent event) throws FileNotFoundException {
-//        if (event.getCode().toString().equals(KeyCode.ENTER)) {deleteSelected();}
-//    }
-    // not working yet
-
-
     @FXML
     public void saveGroceryListToFile() throws FileNotFoundException {
         PrintWriter pw = new PrintWriter(new FileOutputStream("grocery list.txt"));
@@ -100,7 +92,6 @@ public class Controller {
     }
 
     @FXML
-
     public void loadGroceriesFromFile() throws IOException {
         groceries = FXCollections.observableArrayList();
         Path path = Paths.get("grocery list.txt");
@@ -124,15 +115,16 @@ public class Controller {
                 if (itemPieces[0].equals("")) {
                     groceries.remove(0);
                 }
+
                 groceriesList.getItems().setAll(groceries);
                 groceriesList.getSelectionModel().select(0);
                 textField.requestFocus();
+                }
+            } finally {
+                if (bufferedReader != null) {
+                    bufferedReader.close();
+                }
             }
-        } finally {
-            if (bufferedReader != null) {
-                bufferedReader.close();
-            }
-        }
     }
 
     @FXML
